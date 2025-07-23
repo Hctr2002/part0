@@ -1,0 +1,13 @@
+sequenceDiagram
+        actor Browser
+        actor Server
+        Browser->>Server: HTTP Post https://studies.cs.helsinki.fi/exampleapp/new_note
+        Server->>Browser: HTTP 302 Found
+        Browser->>Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+        Server->>Browser: HTTP 200 OK
+        Browser->>Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+        Server->>Browser: main.css
+        Browser->>Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+        Server->>Browser: main.js
+        Browser->>Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+        Server->>Browser: 200 OK
